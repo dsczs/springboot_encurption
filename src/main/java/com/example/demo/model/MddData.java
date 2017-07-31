@@ -4,6 +4,7 @@ import java.util.List;
 
 public class MddData {
     private String orderId; //订单id
+    private boolean changed;    //是否为验厂成功过后 又更改
     private String drawer_name; //开票人名称
     private int address_conformed;  // 注册地与经营地是否相符：0否，1是
     private int business_license;   //营业执照：0没有，1有
@@ -106,6 +107,14 @@ public class MddData {
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
+    }
+
+    public boolean isChanged() {
+        return changed;
+    }
+
+    public void setChanged(boolean changed) {
+        this.changed = changed;
     }
 
     public String getDrawer_name() {
